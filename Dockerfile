@@ -1,8 +1,8 @@
 FROM ubuntu:latest
-RUN apt update
-RUN apt-get upgrade
-RUN apt-get install -y python3 
-RUN apt-get install -y python3-pip
+RUN apt-get update && apt-get install -y \
+    python3 \
+    python3-pip \
+    python3-dev
 COPY . /app
 WORKDIR /app
 EXPOSE 5000
